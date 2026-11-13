@@ -54,3 +54,17 @@ The importer validates decisions and saves `human_decisions.csv`. It does not pr
 - Isolation Forest scores are not probabilities. The held-out class is a controlled simulation of unknown-class evaluation, not a real-world unknown-label guarantee.
 - Quality rules flag excessive feature missingness, non-finite values, and duplicate feature vectors. They do not establish that an observation is astrophysical noise. Flagged rows are retained in outputs.
 - Novelty percentile scores are relative ranks over the full scored dataset. The review queue selects the top 25% of non-quality-flagged OOD candidates by priority, configurable in the script.
+
+## Dataset Attribution
+
+This project uses the simulated LSST light-curve dataset published by:
+
+Crispim Romão, M., Croon, D., and Godines, D. (2025). *LSST light curves for constant and variable sources, and for point-like and extended objects microlensing.*
+
+- **Dataset repository:** https://zenodo.org/records/15005108
+- **DOI:** https://doi.org/10.5281/zenodo.15005108
+- **Associated research paper:** [Anomaly Detection to Identify Transients in LSST Time Series Data](https://arxiv.org/abs/2503.09699)
+
+The original dataset contains approximately 600,000 simulated LSST light curves across six astronomical classes. This project uses a processed dataset containing 597,013 observations.
+
+The original dataset and its scientific contributions belong to their respective authors. The processing pipeline, analysis workflow, and project implementation are documented in this repository.
